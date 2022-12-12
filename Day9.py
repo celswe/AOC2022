@@ -49,7 +49,7 @@ def tail_take_step(h, t, d):
 
 if __name__ == '__main__':
     # Getting the input
-    inp = open("9.txt", "r")
+    inp = open("9t.txt", "r")
     # print(f.read()) #f.readline()  f.read(x)
     inputstring = inp.readlines()
     inp.close()
@@ -78,12 +78,12 @@ if __name__ == '__main__':
                 tail_take_step(knots[k-1], knots[k], direction)
             add_to_visited(visited, knots[9])
 
-        #ax.cla()
-        #ax.set_xlim(-20, 20)
-        #ax.set_ylim(-20, 20)
-        #ax.plot([k[0] for k in knots], [k[1] for k in knots], 'ro')
-        #plt.pause(.2)
-        print(knots, direction)
+            ax.cla()
+            ax.set_xlim(-20, 20)
+            ax.set_ylim(-20, 20)
+            ax.plot([k[0] for k in knots], [k[1] for k in knots], 'ro')
+            plt.pause(.5)
+            print(knots, direction)
 
     print(len(visited))
     print('Day9')
