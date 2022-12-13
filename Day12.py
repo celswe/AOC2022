@@ -46,6 +46,8 @@ if __name__ == '__main__':
     map[start] = height('a')
     map[end] = height('z')
 
+    #start = (0,0)
+
     # part 1
     distances_from_start = np.zeros((xmax, ymax), int) + (xmax * ymax)
     distances_from_start[start] = 0
@@ -87,7 +89,7 @@ if __name__ == '__main__':
 
     print(min([distances_from_end[(rows[i], columns[i])] for i in range(len(rows))]))
     minimal_distance = xmax * ymax
-    for i in range(len(rows)):
-        print(distances_from_end[(rows[i], columns[i])])
+    # for i in range(len(rows)):
+        # print(distances_from_end[(rows[i], columns[i])])
 
     print([distances_from_start[s]] for s in np.where(map == 1))
