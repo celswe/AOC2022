@@ -36,7 +36,6 @@ def compare(p1, p2):
                 return 0
 
 
-
 if __name__ == '__main__':
     # Getting the input
     filename = "13.txt"
@@ -46,9 +45,7 @@ if __name__ == '__main__':
     inp.close()
     total = 0
 
-
     # part 1
-
     for i in range(int(len(inputstring) / 3) + 1):
         packet_1 = eval(inputstring[3 * i].strip())
         packet_2 = eval(inputstring[3 * i + 1].strip())
@@ -67,7 +64,6 @@ if __name__ == '__main__':
         if compare(packet, decode_packet_1) == 1:
             decode_index_1 += 1
             print(decode_packet_1, packet)
-
 
     decode_packet_2 = [[6]]
     decode_index_2 = 2
